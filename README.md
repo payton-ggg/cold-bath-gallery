@@ -1,24 +1,24 @@
 ## Video Cloud 🎥☁️
 
-Это **Next.js** приложение позволяет загружать видео на сервер и использовать его как облачное хранилище.
+This **Next.js** app allows you to upload videos to a server and use it as cloud storage.
 
-### 🔹 Функции:
+### Features:
 
-✅ Загрузка видеофайлов прямо с веб-интерфейса  
-✅ Локальное хранение видео в папке `public/uploads`  
-✅ Просмотр загруженных видео
+✅ Upload video files directly from the web interface  
+✅ Local storage of videos in the `public/uploads` folder  
+✅ View uploaded videos
 
-### 🚀 Запуск проекта:
+### 🚀 To launch:
 
 ```sh
 npm install
 npm run dev
 ```
 
-### 🛠️ Технологии:
+### 🛠️ Tech stack:
 
 - **Next.js**
-- **Formidable** (для обработки загрузки файлов)
-- **Tailwind CSS** (по желанию для стилизации)
+- **Formidable** (to upload files)
+- **Tailwind CSS** (styling)
 
-⚡ Готово к использованию!
+⚡ Ready for using!
