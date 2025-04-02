@@ -2,7 +2,7 @@
 import { useState, useEffect, SetStateAction } from "react";
 
 export default function Home() {
-	const [video, setVideo] = useState(null);
+	const [video, setVideo] = useState<File | null>(null);
 	const [videos, setVideos] = useState([]);
 
 	useEffect(() => {
@@ -15,10 +15,10 @@ export default function Home() {
 		setVideos(data.videos);
 	};
 
-	const handleFileChange = (event: {
-		target: { files: SetStateAction<null>[] };
-	}) => {
-		setVideo(event.target.files[0]);
+	const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		if (event.target.files && event.target.files.length > 0) {
+			setVideo(event.target.files[0]);
+		}
 	};
 
 	const handleUpload = async () => {
