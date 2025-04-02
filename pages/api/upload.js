@@ -4,7 +4,7 @@ import { IncomingForm } from "formidable";
 
 export const config = {
 	api: {
-		bodyParser: false,
+		bodyParser: false, // Отключаем стандартный парсер Next.js
 	},
 };
 
