@@ -38,7 +38,6 @@ export default function VideoCard() {
 
 	return (
 		<div style={{ maxWidth: "600px", margin: "auto", textAlign: "center" }}>
-			<h1>Видео Облако</h1>
 			<input type="file" accept="video/*" onChange={handleFileChange} />
 			<button onClick={handleUpload} style={{ marginTop: "10px" }}>
 				Загрузить
