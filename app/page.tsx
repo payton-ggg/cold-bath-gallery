@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 
 export default function Home() {
 	const [video, setVideo] = useState(null);
@@ -15,7 +15,9 @@ export default function Home() {
 		setVideos(data.videos);
 	};
 
-	const handleFileChange = (event) => {
+	const handleFileChange = (event: {
+		target: { files: SetStateAction<null>[] };
+	}) => {
 		setVideo(event.target.files[0]);
 	};
 
@@ -44,7 +46,9 @@ export default function Home() {
 						type="file"
 						accept="video/*"
 						className="block w-full text-xl p-3 text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-						onChange={handleFileChange}
+						onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+							handleFileChange
+						}
 					/>
 					<button
 						onClick={handleUpload}
